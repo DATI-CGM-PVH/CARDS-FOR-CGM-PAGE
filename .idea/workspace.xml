@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e20574-3c7f-40c4-8f2c-aa6710c5a432" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cards escolhidos pelo controlador/card1/card1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards escolhidos pelo controlador/card1/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards escolhidos pelo controlador/card2/card2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards escolhidos pelo controlador/card2/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "HTML+CSS",
+    "last_opened_file_path": "C:/Users/Usuario/Documents/GitHub/CARDS-FOR-CGM-PAGE/cards escolhidos pelo controlador/card1",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -51,6 +48,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\Documents\GitHub\CARDS-FOR-CGM-PAGE\cards escolhidos pelo controlador\card1" />
+      <recent name="C:\Users\Usuario\Documents\GitHub\CARDS-FOR-CGM-PAGE\cards escolhidos pelo controlador\card2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
