@@ -77,9 +77,13 @@
     padding: 0;
 }
 
+.container .card .face.face2 .content{
+    display: block;
+}
+
 .container .card .face.face2 .content a{
     margin: 15px 0 0;
-    display:  inline-block;
+    justify-self: center;
     text-decoration: none;
     font-weight: 900;
     color: #333;

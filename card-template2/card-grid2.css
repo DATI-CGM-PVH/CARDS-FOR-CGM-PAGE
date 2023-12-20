@@ -1,0 +1,155 @@
+<<<<<<< Updated upstream
+=======
+* {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    box-sizing: border-box; /* Added to include padding and borders in the element's total width and height */
+}
+
+a {
+    text-decoration: none;
+}
+
+p, img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto; /* Combined margin styles */
+}
+
+#programasEAcoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-sessao {
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+#carouselProgramasDesktop ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px 15px;
+}
+
+#carouselProgramasDesktop li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+#carouselProgramasDesktop ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 15px;
+}
+
+#carouselProgramasDesktop #sistema16 li {
+    border-radius: 0;
+    height: 200px;
+}
+
+.card {
+    width: 300px; /* Set a specific width for the cards */
+    height: 200px; /* Set a specific height for the cards */
+    position: relative; /* Relative to position the absolute faces */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ease; /* Transition for the hover effect */
+}
+
+.face {
+    position: absolute;
+    width: 300px; /* Take full width of the card */
+    height: 200px; /* Take full height of the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, z-index 0.5s ease; /* Transition for the hover effect */
+}
+
+/*face1*/
+.face1 {
+
+    background-image: url("caixas dagua azul.jpg");
+    background-size: cover;
+    z-index: 2; /* Ensure this is on top initially */
+}
+
+.card:hover .face1 {
+    background-size: cover;
+}
+
+.face1 .content {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .face1 .content {
+    opacity: 1;
+}
+
+.face1 .content img {
+    max-width: 100px;
+}
+
+/*face2*/
+.face2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("caixas dagua amarela.png");
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(100%); /* Start below the card */
+    z-index: 1; /* Below face1 initially */
+}
+
+.face2 .container{
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .face2 {
+    transform: translateY(0); /* Slide up to cover face1 */
+    z-index: 3; /* Above face1 on hover */
+    background-size: cover;
+}
+
+.face2 .content p {
+    color: black;
+    margin: 0 15px 0 15px;
+    align-self: center;
+    padding: 0;
+}
+
+.face2 .content .read-more {
+    margin-left: 100px;
+    display:  inline-block;;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.face2 .content .read-more:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+>>>>>>> Stashed changes
