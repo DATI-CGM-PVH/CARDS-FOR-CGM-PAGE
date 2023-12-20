@@ -19,12 +19,12 @@ p, img{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: var(--card-width)/2;
 }
 
 .container {
-    width: 100%;
     max-width: var(--card-width);
-    min-width: var(--card-width);
+    min-width: var(--card-width)/2;
     margin: 30px auto; /* Combined margin styles */
 }
 
