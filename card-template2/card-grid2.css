@@ -1,0 +1,176 @@
+
+:root{
+    --card-width: 300px;
+    --card-height: 200px;
+    --yellow-color: #FFD600;
+    --blue-color: #0071CE;
+    --grid-template: repeat(5, 300px);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    box-sizing: border-box; /* Added to include padding and borders in the element's total width and height */
+}
+
+a {
+    text-decoration: none;
+}
+
+p, img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--card-width)/2;
+}
+
+p{
+    text-align: justify;
+}
+
+.card-name{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.container {
+    max-width: var(--card-width);
+    min-width: var(--card-width)/2;
+    margin: 30px auto; /* Combined margin styles */
+}
+
+#programasEAcoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-sessao {
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+#carouselProgramasDesktop ul {
+    display: grid;
+    grid-template-columns: repeat(5, 5fr);
+    gap: 5px;
+}
+
+#carouselProgramasDesktop li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+#carouselProgramasDesktop ul {
+    display: grid;
+    grid-template-columns: var(--grid-template);
+    gap: 20px 15px;
+}
+
+#carouselProgramasDesktop #sistema16 li {
+    border-radius: 0;
+    height: var(--card-height);
+}
+
+.card {
+    width: var(--card-width); /* Set a specific width for the cards */
+    height: var(--card-height); /* Set a specific height for the cards */
+    position: relative; /* Relative to position the absolute faces */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ease; /* Transition for the hover effect */
+}
+
+.face {
+    position: absolute;
+    width: var(--card-width); /* Take full width of the card */
+    height: var(--card-height); /* Take full height of the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, z-index 0.5s ease; /* Transition for the hover effect */
+}
+
+/*face1*/
+.face1 {
+
+    background-image: url("caixas dagua azul.jpg");
+    background-size: cover;
+    z-index: 2; /* Ensure this is on top initially */
+}
+
+.card:hover .face1 {
+    background-size: cover;
+}
+
+.face1 .content {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .face1 .content {
+    opacity: 1;
+}
+
+.face1 .content img {
+    max-width: 100px;
+}
+
+/*face2*/
+.face2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url("caixas dagua amarela.png");*/
+    background: var(--yellow-color);
+    transform: translateY(100%); /* Start below the card */
+    z-index: 1; /* Below face1 initially */
+}
+
+.face2 .container{
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .face2 {
+    transform: translateY(0); /* Slide up to cover face1 */
+    z-index: 3; /* Above face1 on hover */
+    background-size: cover;
+}
+
+.face2 .content p {
+    color: black;
+    margin: 0 15px 0 15px;
+    align-self: center;
+    align-content: center;
+    padding: 0;
+}
+
+.face2 .content .read-more {
+    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    display:  inline-block;;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.face2 .content .read-more:hover {
+    background: #333;
+    color: #fff;
+}
