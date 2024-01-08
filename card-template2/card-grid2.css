@@ -4,6 +4,7 @@
     --card-height: 200px;
     --yellow-color: #FFD600;
     --blue-color: #0071CE;
+    --grid-template: repeat(5, 300px);
 }
 
 * {
@@ -22,6 +23,10 @@ p, img{
     justify-content: center;
     align-items: center;
     min-width: var(--card-width)/2;
+}
+
+p{
+    text-align: justify;
 }
 
 .card-name{
@@ -69,7 +74,7 @@ p, img{
 
 #carouselProgramasDesktop ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: var(--grid-template);
     gap: 20px 15px;
 }
 
@@ -150,11 +155,14 @@ p, img{
     color: black;
     margin: 0 15px 0 15px;
     align-self: center;
+    align-content: center;
     padding: 0;
 }
 
 .face2 .content .read-more {
+    align-content: center;
     margin-left: 100px;
+    margin-right: 100px;
     display:  inline-block;;
     font-weight: 900;
     color: #333;
