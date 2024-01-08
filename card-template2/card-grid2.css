@@ -2,6 +2,8 @@
 :root{
     --card-width: 300px;
     --card-height: 200px;
+    --yellow-color: #FFD600;
+    --blue-color: #0071CE;
 }
 
 * {
@@ -20,6 +22,15 @@ p, img{
     justify-content: center;
     align-items: center;
     min-width: var(--card-width)/2;
+}
+
+.card-name{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
 }
 
 .container {
@@ -118,7 +129,8 @@ p, img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("caixas dagua amarela.png");
+    /*background-image: url("caixas dagua amarela.png");*/
+    background: var(--yellow-color);
     transform: translateY(100%); /* Start below the card */
     z-index: 1; /* Below face1 initially */
 }
