@@ -1,102 +1,64 @@
-*{
+
+:root{
+    --card-width: auto;
+    --card-height: auto;
+    --yellow-color: #FFD600;
+    --blue-color: #0071CE;
+    --grid-template: repeat(5, 220px);
+}
+
+* {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 500;
+    box-sizing: border-box; /* Added to include padding and borders in the element's total width and height */
 }
-.container{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1140px;
-    margin-top: 30px;
+
+a {
+    text-decoration: none;
+}
+
+p, img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--card-width)/2;
+}
+
+p{
+    text-align: justify;
+}
+
+.card-name{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.container {
+    max-width: var(--card-width);
+    min-width: var(--card-width)/2;
+    margin: 30px auto; /* Combined margin styles */
 }
 
 #programasEAcoes {
     display: flex;
     flex-direction: column;
 }
+
 .titulo-sessao {
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 15px;
 }
-div {
-    display: block;
-}
-@media (min-width: 992px)
-#carouselProgramasDesktop ul#sistema16 {
-    grid-template-columns: repeat(5, 1fr);
-}
+
 #carouselProgramasDesktop ul {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px 15px;
-}
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-@media (min-width: 992px)
-#carouselProgramasDesktop #sistema16 li {
-    border-radius: 0;
-}
-
-@media (min-width: 992px)
-#sistema16 li:nth-child(7n+1) {
-    background-color: #2672EC;
-}
-@media (min-width: 992px)
-#sistema16 li:first-child {
-    grid-column: 1/3;
-}
-
-#carouselProgramasDesktop #sistema16 li {
-    border-radius: 0;
-}
-
-#sistema16 li:nth-child(7n) {
-    background-color: #FF1D77;
-}
-
-#sistema16 li:nth-child(7n+1) {
-    background-color: #2672EC;
-}
-#sistema16 li:first-child {
-    grid-column: 1/3;
-}
-
-#sistema16 li:nth-child(7n+2) {
-    background-color: #F3B200;
-}
-
-#sistema16 li:nth-child(7n+3) {
-    background-color: #FF981D;
-}
-
-#sistema16 li:nth-child(7n+4) {
-    background-color: #8C0095;
-}
-
-#sistema16 li:nth-child(7n+5) {
-    background-color: #008A00;
-}
-
-#sistema16 li:nth-child(7n+6) {
-    background-color: #632F00;
+    grid-template-columns: repeat(5, 5fr);
+    gap: 5px;
 }
 
 #carouselProgramasDesktop li {
@@ -105,34 +67,100 @@ ul {
     align-items: center;
     background: white;
     border-radius: 1.25rem;
-    padding: 2rem 1.5rem;
     cursor: pointer;
-    text-align: center;
+    overflow: hidden;
 }
 
-#sistema16 li a {
+
+#carouselProgramasDesktop ul {
+    display: grid;
+    grid-template-columns: var(--grid-template);
+    gap: 20px 15px;
+}
+
+#carouselProgramasDesktop #sistema16 li {
+    border-radius: 0;
+    height: var(--card-height);
+}
+
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 15px;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    width: 220px;
+}
+.card{
+    /*background-image: url("https://www.viagensecaminhos.com/wp-content/uploads/2023/05/porto-velho-ro-tres-caixas-dagua.jpg");
+    */
+    background-image: url("caixas dagua azul.jpg");
+}
+
+.card {
+    position: relative;
+    width: 220px;
+    height: 120px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
     color: white;
 }
 
-@media (min-width: 992px)
-#sistema16 li a {
-    color: white;
+.card::before,
+.card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--yellow-color);
+    transition: all 0.5s;
+    color:black;
 }
-#carouselProgramasDesktop a {
-    font-weight: 500;
-    color: #181c32;
-    text-align: center;
+
+.card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
 }
-a {
-    color: #0071ce;
-    text-decoration: none;
+
+.card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
 }
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
+
+.card:hover::before,
+.card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
 }
-@media (min-width: 992px)
-#sistema16 li:nth-child(7n+5) {
-    background-color: #008A00;
+
+.card:hover:after {
+    transition: all 0.5s;
+    content: "Lorem ipsum dolor";
+}
+
+.logo{
+    height: 30%;
 }
