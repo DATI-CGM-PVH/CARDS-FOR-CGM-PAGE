@@ -1,15 +1,36 @@
+*{
+    margin:0;
+    padding: 0;
+}
 
 :root{
-    --card-width: 300px;
-    --card-height: 200px;
+    --card-width: 210px;
+    --conteiner-width: 100vw;
+    --card-height: 150px;
     --yellow-color: #FFD600;
     --blue-color: #0071CE;
-    --grid-template: repeat(5, 300px);
+    --grid-template: repeat(5, var(--card-width));
+}
+
+@media screen and (max-width: 970px) {
+    :root {
+        --card-width: 22vw; /* Ajustar para telas médias */
+        --grid-template: repeat(4, 22vw); /* 3 colunas para telas médias */
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    :root {
+        --card-width: 50vw; /* Ajustar para telas médias */
+        --grid-template: repeat(2, 1fr); /* 3 colunas para telas médias */
+    }
+
 }
 
 * {
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 500;
     box-sizing: border-box; /* Added to include padding and borders in the element's total width and height */
 }
@@ -29,15 +50,24 @@ p{
     text-align: justify;
 }
 
+.content{
+    max-width: var(--card-width);
+}
+
 .card-name{
     color: whitesmoke;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     justify-content: center;
     text-align: center;
     margin: 1rem;
+    max-width: var(--card-width);
+    max-height: var(--card-height);
 }
 
+.container-main{
+    max-width: var(--conteiner-width);
+}
 .container {
     max-width: var(--card-width);
     min-width: var(--card-width)/2;
@@ -63,6 +93,7 @@ p{
 
 #carouselProgramasDesktop li {
     display: flex;
+    width: var(--card-width);
     justify-content: center;
     align-items: center;
     background: white;
@@ -91,6 +122,11 @@ p{
     align-items: center;
     cursor: pointer;
     transition: transform 0.5s ease; /* Transition for the hover effect */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
 }
 
 .face {
@@ -151,19 +187,29 @@ p{
     background-size: cover;
 }
 
+.face2 .content{
+    display: flex;
+    flex-direction: column; /* Organiza os filhos verticalmente */
+    justify-content: center; /* Alinha filhos horizontalmente ao centro */
+    align-items: center; /* Alinha filhos verticalmente ao centro */
+    text-align: justify; /* Alinha o texto ao centro */
+    max-width: var(--card-width);
+    max-height: var(--card-height);
+
+}
+
 .face2 .content p {
     color: black;
-    margin: 0 15px 0 15px;
+    margin: 15px 15px 0 15px;
     align-self: center;
     align-content: center;
-    padding: 0;
 }
 
 .face2 .content .read-more {
     align-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    display:  inline-block;;
+    align-self: center;
+    justify-content: center;
+    display: inline-flex;
     font-weight: 900;
     color: #333;
     padding: 5px;
