@@ -173,4 +173,5 @@ p{
 .face2 .content .read-more:hover {
     background: #333;
     color: #fff;
+    transition: 0.5s;
 }
