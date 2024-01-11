@@ -1,10 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
-:root{
-    --card-width: auto;
-    --card-height: auto;
+:root {
+    --card-width: 180px;
+    --card-height: 130px;
+    --conteiner-width: 100vw;
     --yellow-color: #FFD600;
     --blue-color: #0071CE;
-    --grid-template: repeat(5, 220px);
+    --grid-template: repeat(5, var(--card-width));
+}
+
+@media screen and (max-width: 970px) {
+    :root {
+        --card-width: 22vw; /* Ajustar para telas médias */
+        --grid-template: repeat(4, var(--card-width)); /* 3 colunas para telas médias */
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    :root {
+        --card-width: 25vw; /* Ajustar para telas médias */
+        --grid-template: repeat(3, var(--card-width)); /* 3 colunas para telas médias */
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    :root {
+        --card-width: 40vw; /* Ajustar para telas médias */
+        --grid-template: repeat(2, var(--card-width)); /* 3 colunas para telas médias */
+    }
+
+    .card {
+        min-width: var(--card-width);
+    }
+
 }
 
 * {
@@ -18,18 +51,21 @@ a {
     text-decoration: none;
 }
 
-p, img{
+p, img {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: var(--card-width)/2;
 }
 
-p{
-    text-align: justify;
+p {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
 }
 
-.card-name{
+.card-name {
     color: whitesmoke;
     font-weight: bolder;
     font-size: 1.5rem;
@@ -40,8 +76,6 @@ p{
 
 .container {
     max-width: var(--card-width);
-    min-width: var(--card-width)/2;
-    margin: 30px auto; /* Combined margin styles */
 }
 
 #programasEAcoes {
@@ -90,32 +124,32 @@ ul {
     gap: 20px 15px;
 }
 
-ul{
+ul {
     display: flex;
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     width: 220px;
 }
-.card{
-    /*background-image: url("https://www.viagensecaminhos.com/wp-content/uploads/2023/05/porto-velho-ro-tres-caixas-dagua.jpg");
-    */
-    background-image: url("caixas dagua azul.jpg");
+
+.logo {
+    height: 30%;
 }
 
 .card {
+    background-image: url("caixas dagua azul.jpg");
     position: relative;
-    width: 220px;
-    height: 120px;
+    width: var(--card-width);
+    height: var(--card-height);
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 15%;
     cursor: pointer;
     color: white;
 }
@@ -133,7 +167,7 @@ a{
     font-weight: bold;
     background-color: var(--yellow-color);
     transition: all 0.5s;
-    color:black;
+    color: black;
 }
 
 .card::before {
@@ -145,7 +179,7 @@ a{
 .card::after {
     bottom: 0;
     left: 0;
-    border-radius: 0 100%  0 15px;
+    border-radius: 0 100% 0 15px;
 }
 
 .card:hover::before,
@@ -158,9 +192,25 @@ a{
 
 .card:hover:after {
     transition: all 0.5s;
-    content: "Lorem ipsum dolor";
+    font-weight: normal;
+    content: "";
 }
 
-.logo{
-    height: 30%;
+.card-text {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.1s; /* Ajuste o delay conforme necessário */
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Outros estilos para o texto conforme necessário */
 }
+
+.card:hover .card-text {
+    opacity: 1;
+    z-index: 1;
+    text-align: justify;
+    color: #181c32;
+}
+
