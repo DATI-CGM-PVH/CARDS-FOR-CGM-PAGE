@@ -1,9 +1,9 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     --card-width: 210px;
     --conteiner-width: 100vw;
     --card-height: 150px;
@@ -39,22 +39,22 @@ a {
     text-decoration: none;
 }
 
-p, img{
+p, img {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: var(--card-width)/2;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-.content{
+.content {
     max-width: var(--card-width);
 }
 
-.card-name{
+.card-name {
     color: whitesmoke;
     font-weight: bolder;
     font-size: 1.2rem;
@@ -65,10 +65,7 @@ p{
     max-height: var(--card-height);
 }
 
-.container-main{
-    max-width: var(--conteiner-width);
-}
-.container {
+.container-card {
     max-width: var(--card-width);
     min-width: var(--card-width)/2;
     margin: 30px auto; /* Combined margin styles */
@@ -176,7 +173,7 @@ p{
     z-index: 1; /* Below face1 initially */
 }
 
-.face2 .container{
+.face2 .container {
     justify-content: center;
     align-items: center;
 }
@@ -187,7 +184,7 @@ p{
     background-size: cover;
 }
 
-.face2 .content{
+.face2 .content {
     display: flex;
     flex-direction: column; /* Organiza os filhos verticalmente */
     justify-content: center; /* Alinha filhos horizontalmente ao centro */
