@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card 02</title>
-    <link rel="stylesheet" href="card-grid2.css">
-
-</head>
-<body>
-<div class="navbar">
-    <a href="../card-original/card-grid.html">Card Original</a>
-    <a href="../card-template1/card-grid1.html">Card Template 1</a>
-    <a class="active" href="#">Card Template 2</a>
-</div>
-<div class="container">
+export function card2Template(){
+    return `
+        
+        <div class="container">
     <div id="programasEAcoes">
         <div class="titulo-sessao">
             Programas
@@ -282,5 +270,6 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+    
+    `
+}

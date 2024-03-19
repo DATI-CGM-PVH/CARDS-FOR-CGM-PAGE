@@ -204,13 +204,16 @@ a {
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    /* Outros estilos para o texto conforme necessário */
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
 }
 
 .card:hover .card-text {
     opacity: 1;
     z-index: 1;
-    text-align: justify;
+    text-align: center;
     color: #181c32;
 }
 

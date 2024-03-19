@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Card ORIGINAL</title>
-    <link rel="stylesheet" href="card-grid.css">
-    <link rel="stylesheet" href="../components/navbar/navbar.css">
-</head>
-<body>
-<div class="navbar">
-    <a class="active" href="#">Card Original</a>
-    <a href="../card-template1/card-grid1.html">Card Template 1</a>
-    <a href="../card-template2/card-grid2.html">Card Template 2</a>
-</div>
-<div class="container">
+export function cardOriginal() {
+    return `
+    <div class="container">
     <div id="programasEAcoes">
         <div class="titulo-sessao">
             Programas
@@ -81,5 +69,5 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+    `
+}

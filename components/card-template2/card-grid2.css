@@ -48,9 +48,12 @@ p, img {
 
 p {
     text-align: justify;
+    font-weight: bold;
 }
 
-.content {
+
+
+.content2 {
     max-width: var(--card-width);
 }
 
@@ -109,9 +112,10 @@ p {
 #carouselProgramasDesktop #sistema16 li {
     border-radius: 0;
     height: var(--card-height);
+
 }
 
-.card {
+.card2 {
     width: var(--card-width); /* Set a specific width for the cards */
     height: var(--card-height); /* Set a specific height for the cards */
     position: relative; /* Relative to position the absolute faces */
@@ -121,15 +125,15 @@ p {
     transition: transform 0.5s ease; /* Transition for the hover effect */
 }
 
-.card img {
+.card2 img {
     max-width: 100%;
     height: auto;
 }
 
 .face {
     position: absolute;
-    width: var(--card-width); /* Take full width of the card */
-    height: var(--card-height); /* Take full height of the card */
+    width: var(--card-width); /* Take full width of the card2 */
+    height: var(--card-height); /* Take full height of the card2 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,20 +148,20 @@ p {
     z-index: 2; /* Ensure this is on top initially */
 }
 
-.card:hover .face1 {
+.card2:hover .face1 {
     background-size: cover;
 }
 
-.face1 .content {
+.face1 .content2 {
     opacity: 1;
     transition: opacity 0.5s ease;
 }
 
-.card:hover .face1 .content {
+.card2:hover .face1 .content2 {
     opacity: 1;
 }
 
-.face1 .content img {
+.face1 .content2 img {
     max-width: 100px;
 }
 
@@ -169,7 +173,7 @@ p {
     align-items: center;
     /*background-image: url("caixas dagua amarela.png");*/
     background: var(--yellow-color);
-    transform: translateY(100%); /* Start below the card */
+    transform: translateY(100%); /* Start below the card2 */
     z-index: 1; /* Below face1 initially */
 }
 
@@ -178,13 +182,13 @@ p {
     align-items: center;
 }
 
-.card:hover .face2 {
+.card2:hover .face2 {
     transform: translateY(0); /* Slide up to cover face1 */
     z-index: 3; /* Above face1 on hover */
     background-size: cover;
 }
 
-.face2 .content {
+.face2 .content2 {
     display: flex;
     flex-direction: column; /* Organiza os filhos verticalmente */
     justify-content: center; /* Alinha filhos horizontalmente ao centro */
@@ -195,14 +199,14 @@ p {
 
 }
 
-.face2 .content p {
+.face2 .content2 p {
     color: black;
     margin: 15px 15px 0 15px;
     align-self: center;
     align-content: center;
 }
 
-.face2 .content .read-more {
+.face2 .content2 .read-more {
     align-content: center;
     align-self: center;
     justify-content: center;
@@ -213,7 +217,7 @@ p {
     border: 1px solid #333;
 }
 
-.face2 .content .read-more:hover {
+.face2 .content2 .read-more:hover {
     background: #333;
     color: #fff;
     transition: 0.5s;

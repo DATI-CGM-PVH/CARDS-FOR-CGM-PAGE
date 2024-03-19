@@ -14,13 +14,13 @@ a{
     text-decoration: none;
     width: 220px;
 }
-.card{
+.card2{
     /*background-image: url("https://www.viagensecaminhos.com/wp-content/uploads/2023/05/porto-velho-ro-tres-caixas-dagua.jpg");
     */
     background-image: url("caixas dagaua azul.jpg");
 }
 
-.card {
+.card2 {
     position: relative;
     width: 220px;
     height: 120px;
@@ -36,8 +36,8 @@ a{
     color: white;
 }
 
-.card::before,
-.card::after {
+.card2::before,
+.card2::after {
     position: absolute;
     content: "";
     width: 20%;
@@ -52,27 +52,27 @@ a{
     color:black;
 }
 
-.card::before {
+.card2::before {
     top: 0;
     right: 0;
     border-radius: 0 15px 0 100%;
 }
 
-.card::after {
+.card2::after {
     bottom: 0;
     left: 0;
     border-radius: 0 100%  0 15px;
 }
 
-.card:hover::before,
-.card:hover:after {
+.card2:hover::before,
+.card2:hover:after {
     width: 100%;
     height: 100%;
     border-radius: 15px;
     transition: all 0.5s;
 }
 
-.card:hover:after {
+.card2:hover:after {
     transition: all 0.5s;
     content: "Lorem ipsum dolor";
 }

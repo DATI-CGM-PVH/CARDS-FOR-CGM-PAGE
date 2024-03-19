@@ -6,18 +6,18 @@
     justify-content: space-between;
 }
 
-.container .card{
+.container .card2{
     position: relative;
     cursor: pointer;
 }
 
-.container .card .face{
+.container .card2 .face{
     width: 300px;
     height: 200px;
     transition: 0.5s;
 }
 
-.container .card .face.face1{
+.container .card2 .face.face1{
     position: relative;
     background: #082972;
     display: flex;
@@ -27,7 +27,7 @@
     transform: translateY(100px);
 }
 
-.container .card:hover .face.face1{
+.container .card2:hover .face.face1{
     background: url("caixas dagaua azul.jpg");
     background-size: cover;
     transform: translateY(0);
@@ -35,20 +35,20 @@
 
 }
 
-.container .card .face.face1 .content{
+.container .card2 .face.face1 .content2{
     opacity: 0.2;
     transition: 0.5s;
 }
 
-.container .card:hover .face.face1 .content{
+.container .card2:hover .face.face1 .content2{
     opacity: 1;
 }
 
-.container .card .face.face1 .content img{
+.container .card2 .face.face1 .content2 img{
     max-width: 100px;
 }
 
-.container .card .face.face1 .content h3{
+.container .card2 .face.face1 .content2 h3{
     margin: 10px 0 0;
     padding: 0;
     color: #fff;
@@ -56,7 +56,7 @@
     font-size: 1.5em;
 }
 
-.container .card .face.face2{
+.container .card2 .face.face2{
     position: relative;
     background: #ffcd1e;
     display: flex;
@@ -68,20 +68,20 @@
     transform: translateY(-100px);
 }
 
-.container .card:hover .face.face2{
+.container .card2:hover .face.face2{
     transform: translateY(0);
 }
 
-.container .card .face.face2 .content p{
+.container .card2 .face.face2 .content2 p{
     margin: 0;
     padding: 0;
 }
 
-.container .card .face.face2 .content{
+.container .card2 .face.face2 .content2{
     display: block;
 }
 
-.container .card .face.face2 .content a{
+.container .card2 .face.face2 .content2 a{
     margin: 15px 0 0;
     justify-self: center;
     text-decoration: none;
@@ -91,7 +91,7 @@
     border: 1px solid #333;
 }
 
-.container .card .face.face2 .content a:hover{
+.container .card2 .face.face2 .content2 a:hover{
     background: #333;
     color: #fff;
 }
